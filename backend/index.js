@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const cors = require('cors')
+const leadRoutes = require('./Routes/leadRoutes')
 
 require('dotenv').config();
 
@@ -12,7 +13,7 @@ app.get('/',(req,res) => (
     res.send('Server is running !')
 ))
 
-app.use('/leads',)
+app.use('/leads',leadRoutes)
 
 const port = 5000
 app.listen(port,()=>{
