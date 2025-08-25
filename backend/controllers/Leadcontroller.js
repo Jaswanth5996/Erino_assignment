@@ -41,4 +41,5 @@ const deleteLead = async (req,res) => {
 }
 
 
+
 module.exports = {getLeads,fetchLead,deleteLead}
