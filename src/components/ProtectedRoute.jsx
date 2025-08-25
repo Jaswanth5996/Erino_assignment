@@ -11,7 +11,7 @@ const Protect = ({children}) =>{
     else if (!loggedIn) navigate("/");
      else setLoading(false);
 },[loggedIn,navigate])
-    if (loading) return <div className="flex justify-center items-center text-5xl">Loading...</div>;
+    if (loading) return <div className="flex justify-center items-center text-3xl">Loading...</div>;
     return children
 }
 

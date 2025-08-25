@@ -39,7 +39,7 @@ const Nav = () => {
             {loggedIn ?(
             <>
             <Link to="/leads" className="hover:underline hover:[text-underline-offset:12px] hover:decoration-purple-600">Leads</Link>
-            <Link to="/" className="hover:underline hover:[text-underline-offset:12px] hover:decoration-purple-600">Create Lead</Link>
+            <Link to="/create" className="hover:underline hover:[text-underline-offset:12px] hover:decoration-purple-600">Create Lead</Link>
             <button onClick={handleLogout} className="hover:underline hover:[text-underline-offset:12px] hover:decoration-purple-600">Logout</button>
             </>
             ):(

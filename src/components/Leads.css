@@ -1,0 +1,15 @@
+.custom-grid .ag-header {
+  color:white;
+  background-color: rgb(156, 30, 240); 
+  font-weight: bold;
+}
+.custom-grid .ag-row {  
+  background-color: #f3f0ff;
+}
+.custom-grid .ag-row-even {
+  background-color: #ede9fe;
+}
+.custom-grid .ag-row:hover {
+  color: white;
+  background-color: #cd3bfe;
+}

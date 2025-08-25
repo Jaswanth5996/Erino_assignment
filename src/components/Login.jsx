@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import axios from "axios";
@@ -6,10 +6,16 @@ import image from '../images/bg3.jpeg'
 
 const Login = () =>{
     const navigate=useNavigate()
-    const { setLoggedIn, setUser } = useAuth();
+    const { loggedIn,setLoggedIn, setUser } = useAuth();
     const [show,setShow] = useState(false)
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
+
+    useEffect(() => {
+    if (loggedIn) {
+      navigate('/leads')
+    }
+  }, [loggedIn]);
 
     const handleSubmit =async (e) => {
             e.preventDefault()

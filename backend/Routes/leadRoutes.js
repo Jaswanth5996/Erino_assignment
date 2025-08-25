@@ -4,10 +4,10 @@ const protect = require('../userMiddleware')
 
 const router = express.Router()
 
-// router.get('/:id',protect,fetchLead)
-// router.put('/:id',protect,updateLead)
-// router.delete('/:id',protect,deleteLead)
-// router.get('/',protect,getLeads)
-// router.post('/',protectcreateLead)
+router.get('/:id',protect,fetchLead)
+router.put('/:id',protect,updateLead)
+router.delete('/:id',protect,deleteLead)
+router.get('/',getLeads)
+router.post('/',protect,createLead)
 
 module.exports = router;
