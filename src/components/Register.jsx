@@ -18,7 +18,7 @@ const Register = () =>{
             return 
         }
         try{
-            const response  = await axios.post('http://localhost:5000/users/register',{email,password},{ headers:{"Content-Type": "application/json"},withCredentials:true})
+            const response  = await axios.post('https://erino-assignment-yuf9.onrender.com/users/register',{email,password},{ headers:{"Content-Type": "application/json"},withCredentials:true})
             console.log("user created",response.data)
             window.location.reload();
             alert("Registration Successful!")

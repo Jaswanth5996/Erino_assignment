@@ -21,7 +21,7 @@ const Detail = () =>{
   });
  useEffect(() => {
     if (leadId) {
-      axios.get(`http://localhost:5000/leads/${leadId}`,{ withCredentials: true })
+      axios.get(`https://erino-assignment-yuf9.onrender.com/leads/${leadId}`,{ withCredentials: true })
       .then((res) => setFormData(res.data.lead))
         .catch((err) => console.error(err));
     }

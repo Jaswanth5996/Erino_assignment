@@ -9,7 +9,7 @@ const Nav = () => {
     const { loggedIn,setLoggedIn, setUser } = useAuth();
     useEffect(() => {
     const checkLogin = async () => {
-      try {const res = await axios.get("http://localhost:5000/users/me", {withCredentials: true,});
+      try {const res = await axios.get("https://erino-assignment-yuf9.onrender.com/users/me", {withCredentials: true,});
         if (res.data.loggedIn) {
           setLoggedIn(true);
         } else {
@@ -23,7 +23,7 @@ const Nav = () => {
   }, []);
 
   const handleLogout = async () => {
-    try {await axios.post("http://localhost:5000/users/logout",{},{ withCredentials: true });
+    try {await axios.post("https://erino-assignment-yuf9.onrender.com/users/logout",{},{ withCredentials: true });
       setLoggedIn(false);
     }catch (err) {
       console.error("Logout failed", err);

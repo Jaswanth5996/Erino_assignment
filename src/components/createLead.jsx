@@ -24,7 +24,7 @@ const CreateLead = () => {
 
 useEffect(() => {
     if (leadId) {
-      axios.get(`http://localhost:5000/leads/${leadId}`,{ withCredentials: true })
+      axios.get(`https://erino-assignment-yuf9.onrender.com/leads/${leadId}`,{ withCredentials: true })
       .then((res) => setFormData(res.data.lead))
         .catch((err) => console.error(err));
     }
@@ -39,12 +39,12 @@ useEffect(() => {
     e.preventDefault();
     try {
     if (leadId) {
-      const res = await axios.put(`http://localhost:5000/leads/${leadId}`, formData, { withCredentials: true });
+      const res = await axios.put(`https://erino-assignment-yuf9.onrender.com/leads/${leadId}`, formData, { withCredentials: true });
       console.log("Lead updated:", res.data);
       alert("Lead updated successfully!");
       navigate('/leads')
     } else {
-      const res = await axios.post("http://localhost:5000/leads", formData, { withCredentials: true });
+      const res = await axios.post("https://erino-assignment-yuf9.onrender.com/leads", formData, { withCredentials: true });
       console.log("Lead created:", res.data);
       alert("Lead created successfully!");
       navigate('/leads')

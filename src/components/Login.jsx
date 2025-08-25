@@ -20,7 +20,7 @@ const Login = () =>{
     const handleSubmit =async (e) => {
             e.preventDefault()
             try{
-                const response  = await axios.post('http://localhost:5000/users/login',{email,password},{ headers:{"Content-Type": "application/json"},withCredentials:true})
+                const response  = await axios.post('https://erino-assignment-yuf9.onrender.com/users/login',{email,password},{ headers:{"Content-Type": "application/json"},withCredentials:true})
                 console.log("login successful",response.data)
                 setLoggedIn(true);
                 setUser(response.data.user); 

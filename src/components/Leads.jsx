@@ -17,7 +17,7 @@ const Leads = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/leads/${id}`, { withCredentials: true });
+      await axios.delete(`https://erino-assignment-yuf9.onrender.com/leads/${id}`, { withCredentials: true });
       setRowData(rowData.filter(row => row._id !== id));
     } catch (err) {
       console.error("Delete error:", err);
@@ -62,7 +62,7 @@ const Leads = () => {
   useEffect(() => {
     const fetchLeads = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/leads?page=${currentPage}&limit=${pageSize}`, { withCredentials: true });
+        const response = await axios.get(`https://erino-assignment-yuf9.onrender.com/leads?page=${currentPage}&limit=${pageSize}`, { withCredentials: true });
         setRowData(response.data.leads);
         setTotalLeads(response.data.total); 
       } catch (error) {
